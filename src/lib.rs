@@ -227,7 +227,7 @@ pub enum Interrupt {
 unsafe impl cortex_m::interrupt::InterruptNumber for Interrupt {
     #[inline(always)]
     fn number(self) -> u16 {
-        *self as u8
+        self as u16
     }
 }
 #[cfg(feature = "rt")]
